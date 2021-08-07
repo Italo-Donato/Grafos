@@ -41,7 +41,7 @@ public class App {
         XAGM arvore2 = new XAGM();
         arvore2.arvoreCaminhoMinimo(grafo2).forEach(numSEi -> System.out.println(numSEi.toString()));
         System.out.println(arvore2.pesoArvore()); */
-        XGrafo grafo3 = new XGrafo();
+        /* XGrafo grafo3 = new XGrafo();
         grafo3.addArestaDupla(0, 1);
         grafo3.addArestaDupla(0, 3);
         grafo3.addArestaDupla(2, 1);
@@ -72,6 +72,74 @@ public class App {
         grafo4.addAresta(6, 8);
         grafo4.addAresta(7, 8);
         XCiclo cicloGrafo2 = new XCiclo();
-        System.out.println(cicloGrafo2.isCicle(grafo4));
+        System.out.println(cicloGrafo2.isCicle(grafo4)); */
+/* 
+        XGrafo distacia1 = new XGrafo();
+        distacia1.addAresta(1,2,8);
+        distacia1.addAresta(1,3,4);
+        distacia1.addAresta(1,4,5);
+        distacia1.addAresta(2,5,9);
+        distacia1.addAresta(4,2,3);
+        distacia1.addAresta(4,3,5);
+        distacia1.addAresta(4,5,2);
+        distacia1.addAresta(3,4,1);
+        distacia1.addAresta(3,5,5);
+
+        XAEDsMaps mapDistacia1 = new XAEDsMaps(distacia1, 1);
+        System.out.println(mapDistacia1.getCaminho(5));
+        System.out.println(mapDistacia1.getPeso(5));
+
+        System.out.println("---------------");
+
+        XGrafo tempo1 = new XGrafo();
+        tempo1.addAresta(1,2,3);
+        tempo1.addAresta(1,3,2);
+        tempo1.addAresta(1,4,10);
+        tempo1.addAresta(2,5,5);
+        tempo1.addAresta(4,2,8);
+        tempo1.addAresta(4,3,7);
+        tempo1.addAresta(4,5,7);
+        tempo1.addAresta(3,4,4);
+        tempo1.addAresta(3,5,2);
+
+
+        XAEDsMaps mapTempo1 = new XAEDsMaps(tempo1, 1);
+        System.out.println(mapTempo1.getCaminho(5));
+        System.out.println(mapTempo1.getPeso(5)); */
+
+        XGrafo distacia2 = new XGrafo();
+        distacia2.addAresta(1,2,3);
+        distacia2.addAresta(1,4,5);
+        distacia2.addAresta(2,4,2);
+        distacia2.addAresta(4,2,3);
+        distacia2.addAresta(2,3,2);
+        distacia2.addAresta(4,3,5);
+        distacia2.addAresta(4,5,9);
+        distacia2.addAresta(2,5,2);
+        distacia2.addAresta(5,2,4);
+        distacia2.addAresta(5,1,6);
+
+        XAEDsMaps mapDistacia2 = new XAEDsMaps(distacia2, 1);
+        System.out.println(mapDistacia2.getCaminho(5));
+        System.out.println(mapDistacia2.getPeso(5));
+
+        System.out.println("---------------");
+
+        XGrafo tempo2 = new XGrafo();
+        tempo2.addAresta(1,2,3);
+        tempo2.addAresta(1,4,5);
+        tempo2.addAresta(2,4,2);
+        tempo2.addAresta(2,3,6);
+        tempo2.addAresta(3,5,2);
+        tempo2.addAresta(4,2,1);
+        tempo2.addAresta(4,5,6);
+        tempo2.addAresta(4,3,4);
+        tempo2.addAresta(5,3,7);
+        tempo2.addAresta(5,1,3);
+
+
+        XAEDsMaps mapTempo2 = new XAEDsMaps(tempo2, 1);
+        System.out.println(mapTempo2.getCaminho(5));
+        System.out.println(mapTempo2.getPeso(5));
     }
 }

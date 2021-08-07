@@ -65,6 +65,16 @@ public class XGrafo {
         return null;
     }
 
+    public Aresta nextArestaFim(int verticeFinal){  //recebe qual o vértice final da aresta desejada
+        for(Aresta aresta : arestas){
+            if(aresta.getFim() == verticeFinal && !aresta.isUsado()){ //procura a aresta 
+                aresta.setUsado(true);//             e caso ela não tenha sido usada será retornada
+                return aresta;
+            }
+        }
+        return null;
+    }
+
     private Aresta primeiraNaoUsada(){ //retorna a primeira aresta não usada
         for(Aresta aresta : arestas){
             if(!aresta.isUsado())

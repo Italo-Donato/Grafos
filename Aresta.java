@@ -70,6 +70,7 @@ public class Aresta implements Comparable<Aresta>{
 
     @Override
     public String toString() {
-        return inicio +" <--> "+ fim + " peso: "+ peso;
+        return inicio +" --> "+ fim + " peso: "+ peso;
     }
+
 }
